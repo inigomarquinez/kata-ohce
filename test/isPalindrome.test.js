@@ -4,6 +4,11 @@ const isPalindrome = require('../lib/isPalindrome');
 
 describe('isPalindrome', () => {
   describe('check palindrome word', () => {
+    it('should return false if the input is NOT of type string', () => {
+      assert.equal(isPalindrome(1), false);
+      assert.equal(isPalindrome({}), false);
+    });
+
     it('should return false if the word is NOT a palindrome', () => {
       const result = isPalindrome('palíndromo');
       assert.equal(result, false);
