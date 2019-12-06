@@ -1,0 +1,21 @@
+{
+  "name": "ohce-cli",
+  "version": "1.0.0",
+  "description": "ohce CLI",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "ohce": "./bin/index.js"
+  },
+  "author": "",
+  "contributors": [
+    "Rubén Romero <ruben.romero@guidesmiths.com>",
+    "Íñigo Marquínez <inigo.marquinez@guidesmiths.com>"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
+}
