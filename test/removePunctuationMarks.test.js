@@ -9,9 +9,9 @@ describe('removePunctuationMarks', () => {
     assert.notEqual(original, transformed);
   });
 
-  it('should remove punctuation marks and spaces from a string so the transformed string is the same as the original one removing punctuation marks and spaces', () => {
+  it('should remove punctuation marks from a string so the transformed string is the same as the original one removing punctuation marks', () => {
     const transformed = '¡Hola! ¿Qué tal?'.removePunctuationMarks();
-    const expected ='HolaQuétal'
+    const expected ='Hola Qué tal'
     assert.equal(transformed, expected);
   });
 });
