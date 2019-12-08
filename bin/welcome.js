@@ -13,6 +13,7 @@ const welcome = name => {
   }
 
   console.log(`¡${prefix} ${name}!`);
+
 };
 
 module.exports = welcome;
