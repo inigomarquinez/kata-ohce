@@ -1,7 +1,4 @@
 const welcome = name => {
-  const welcomeMessage = `Hello, ${name}!`;
-  console.log(welcomeMessage);
-
   const now = new Date().getHours();
   let prefix = '';
   if (now > 20 && now < 6) {
