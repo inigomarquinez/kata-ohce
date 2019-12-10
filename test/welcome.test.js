@@ -3,7 +3,7 @@ const {
   createOutputInterceptor
 } = require('output-interceptor');
 
-const welcome = require('../bin/welcome');
+const welcome = require('../lib/welcome');
 
 describe('welcome', () => {
 
