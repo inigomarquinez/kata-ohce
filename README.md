@@ -17,4 +17,4 @@ ohce kata at GuideSmiths for Xmas 2019
 
 [ohce kata](https://kata-log.rocks/ohce-kata)
 
-[Definición y ejemplos de palíndromo](https://es.wikipedia.org/wiki/Pal%C3%ADndromo)
+[Definition and examples of palindromes (Spanish)](https://es.wikipedia.org/wiki/Pal%C3%ADndromo)
