@@ -1,20 +1,35 @@
 #!/usr/bin/env node
 
+const { exec } = require('child_process');
+
+const yargs = require("yargs");
 const welcome = require('../lib/welcome');
 const userLoop = require('../lib/userLoop');
 
-const ohce = () => {
-  const [bash, command, ...args] = process.argv;
-
-  if (args.length === 0) {
-    console.error('Incorrect use. TODO: Show ohce help');
-    return -1;
-  }
-
-  welcome(args[0]);
-  userLoop(args[0]);
-}
-
-ohce();
-
-module.exports = ohce;
+yargs
+  .command({
+    command: '$0 <name>',
+    desc: 'ohce is a console application that echoes the reverse of what you input through the console',
+    handler: argv => {
+      welcome(argv.name);
+      if (!argv.test)
+        userLoop(argv.name);
+      else
+        exec('npm t', (error, stdout, stderr) => {
+        if (error) {
+          console.error(`exec error: ${error}`);
+          return;
+        }
+        console.log(stdout);
+        console.error(stderr);
+      });
+    }
+  })
+  .option('t', {
+    alias: 'test',
+    default: true,
+    defaultDescription: 'Launch the tests',
+    describe: 'Exec tests'
+  })
+  .help()
+  .argv
