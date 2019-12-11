@@ -7,11 +7,15 @@ ohce kata at GuideSmiths for Xmas 2019
 - Clone the repository `https://github.com/inigomarquinez/kata-ohce.git`
 - Go to the root folder
 - Run `npm install -g`
-- From the console type `ohce`
+- Run `ohce`
 
 ## How to uninstall the CLI
 
 - Run `npm uninstall -g ohce-cli`
+
+## How to run the tests
+
+- Run `npm test` from the root folder.
 
 ## Links
 

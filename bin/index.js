@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
-const welcome = require('./welcome');
+const welcome = require('../lib/welcome');
+const userLoop = require('../lib/userLoop');
 
 const ohce = () => {
   const [bash, command, ...args] = process.argv;
@@ -11,6 +12,7 @@ const ohce = () => {
   }
 
   welcome(args[0]);
+  userLoop(args[0]);
 }
 
 ohce();
