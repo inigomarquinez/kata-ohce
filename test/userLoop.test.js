@@ -4,7 +4,7 @@ const mockStdin = require('mock-stdin').stdin();
 
 const userLoop = require('../lib/userLoop');
 
-describe('userLoop', () => {
+describe.only('userLoop', () => {
   let consoleLogStub;
   let processExitStub;
 
@@ -50,5 +50,10 @@ describe('userLoop', () => {
     );
     assert(consoleLogStub.calledOnce);
     assert.strictEqual(consoleLogStub.getCall(0).lastArg, 'Adios user name');
+  });
+
+  it.only('should show the prompt again if the user presses ENTER without introducing any input', () => {
+    mockStdin.send('\n');
+    assert(consoleLogStub.notCalled);
   });
 });
