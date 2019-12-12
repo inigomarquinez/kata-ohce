@@ -1,20 +1,38 @@
 #!/usr/bin/env node
 
+const yargonaut = require('yargonaut');
+const yargs = require('yargs');
+const chalk = require('chalk');
+
 const welcome = require('../lib/welcome');
 const userLoop = require('../lib/userLoop');
 
-const ohce = () => {
-  const [bash, command, ...args] = process.argv;
 
-  if (args.length === 0) {
-    console.error('Incorrect use. TODO: Show ohce help');
-    return -1;
-  }
+yargonaut
+  .style('blue')
+  .helpStyle('green')
+  .errorsStyle('red.bold')
+  .help('Chunky')
 
-  welcome(args[0]);
-  userLoop(args[0]);
-}
-
-ohce();
-
-module.exports = ohce;
+yargs
+  .command({
+    command: '$0 <name>',
+    desc: chalk.hex('#13C4AC')('ohce is a console application that echoes the reverse of what you input through the console'),
+    handler: argv => {
+      welcome(argv.name, argv.colour);
+      userLoop(argv.name, argv.colour);
+    }
+  })
+  .option('c', {
+    alias: 'colour',
+    type: 'boolean',
+    describe: chalk.hex('#C1137C')('CLI add colours')
+  })
+  .option('version', {
+    describe: chalk.hex('#C1137C')('Show version number')
+  })
+  .help()
+  .option('help', {
+    describe: chalk.hex('#C1137C')('Show help')
+  })
+  .argv
