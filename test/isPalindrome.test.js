@@ -13,12 +13,12 @@ describe('isPalindrome', () => {
       const result = isPalindrome('palíndromo');
       assert.equal(result, false);
     });
-    
+
     it('should return true if the word is a palindrome', () => {
       const result = isPalindrome('reconocer');
       assert.equal(result, true);
     });
-  
+
     it('should return true if the word is a palindrome with different number of white spaces at both ends', () => {
       const result = isPalindrome('   reconocer ');
       assert.equal(result, true);
@@ -30,12 +30,12 @@ describe('isPalindrome', () => {
       const result = isPalindrome('Esto no es un palíndromo');
       assert.equal(result, false);
     });
-    
+
     it('should return true if the sentence is a palindrome', () => {
       const result = isPalindrome('Arriba birra');
       assert.equal(result, true);
     });
-  
+
     it('should return true if the sentence is a palindrome with different number of white spaces at both ends', () => {
       const result = isPalindrome('   Arriba birra ');
       assert.equal(result, true);
@@ -47,7 +47,7 @@ describe('isPalindrome', () => {
       const result = isPalindrome('Isaac no ronca así');
       assert.equal(result, true);
     });
-  
+
     it('should not transform \'ñ\' character and return false if the word / sentence containing \'ñ\' is NOT a palindrome', () => {
       const result = isPalindrome('Añora la rona');
       assert.equal(result, false);
@@ -57,7 +57,7 @@ describe('isPalindrome', () => {
       const result = isPalindrome('Añora la roña');
       assert.equal(result, true);
     });
-  
+
     it('should skip punctuation marks and return true if the word / sentence containing punctuation marks is a palindrome', () => {
       const result = isPalindrome('¿Acaso hubo búhos acá?');
       assert.equal(result, true);

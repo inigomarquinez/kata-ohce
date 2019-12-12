@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-String.prototype.replaceDiacriticalMarks = require('../lib/replaceDiacriticalMarks');
+String.prototype.replaceDiacriticalMarks = require('../lib/replaceDiacriticalMarks'); // eslint-disable-line no-extend-native
 
 describe('removeDiacriticalMarks', () => {
   it('should replace diacritical marks from a string so the transformed string is not the same as the original one', () => {
