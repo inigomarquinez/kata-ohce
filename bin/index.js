@@ -25,7 +25,7 @@ yargs
   })
   .option('c', {
     alias: 'colour',
-    describe: chalk.hex('#C1137C')('Exec tests')
+    describe: chalk.hex('#C1137C')('CLI add colours')
   })
   .option('version', {
     describe: chalk.hex('#C1137C')('Show version number')
