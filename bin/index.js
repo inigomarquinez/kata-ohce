@@ -1,22 +1,37 @@
 #!/usr/bin/env node
 
+const yargonaut = require('yargonaut');
 const yargs = require('yargs');
+const chalk = require('chalk');
+
 const welcome = require('../lib/welcome');
 const userLoop = require('../lib/userLoop');
+
+
+yargonaut
+  .style('blue')
+  .helpStyle('green')
+  .errorsStyle('red.bold')
+  .help('Chunky')
 
 yargs
   .command({
     command: '$0 <name>',
-    desc: 'ohce is a console application that echoes the reverse of what you input through the console',
+    desc: chalk.hex('#13C4AC')('ohce is a console application that echoes the reverse of what you input through the console'),
     handler: argv => {
-      console.log('argv', argv)
       welcome(argv.name, argv.colour);
       userLoop(argv.name, argv.colour);
     }
   })
   .option('c', {
     alias: 'colour',
-    describe: 'Exec tests'
+    describe: chalk.hex('#C1137C')('Exec tests')
+  })
+  .option('version', {
+    describe: chalk.hex('#C1137C')('Show version number')
   })
   .help()
+  .option('help', {
+    describe: chalk.hex('#C1137C')('Show help')
+  })
   .argv
