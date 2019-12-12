@@ -38,6 +38,11 @@ describe('userLoop', () => {
     assert.strictEqual(consoleLogStub.getCall(1).lastArg, '¡Bonita palabra!');
   });
 
+  it('should show the prompt again if the user presses ENTER without introducing any input', () => {
+    mockStdin.send('\n');
+    assert(consoleLogStub.notCalled);
+  });
+
   it('should echo \'Adios user name\' and exit when the user dispatches an end event', () => {
     assert.throws(
       () => {
