@@ -25,6 +25,7 @@ yargs
   })
   .option('c', {
     alias: 'colour',
+    type: 'boolean',
     describe: chalk.hex('#C1137C')('CLI add colours')
   })
   .option('version', {
