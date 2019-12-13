@@ -7,7 +7,9 @@
     "test": "mocha",
     "release:patch": "git tag -l | xargs git tag -d && changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
     "release:minor": "git tag -l | xargs git tag -d && changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
-    "release:major": "git tag -l | xargs git tag -d && changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags"
+    "release:major": "git tag -l | xargs git tag -d && changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags",
+    "lint": "eslint .",
+    "lint:fix": "npx eslint . --fix"
   },
   "bin": {
     "ohce": "./bin/index.js"
@@ -19,6 +21,9 @@
   ],
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-plugin-mocha": "^6.2.2",
+    "husky": "^3.1.0",
     "mocha": "^6.2.2",
     "mock-stdin": "^1.0.0",
     "output-interceptor": "^3.2.0",

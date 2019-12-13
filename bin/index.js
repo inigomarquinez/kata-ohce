@@ -12,7 +12,7 @@ yargonaut
   .style('blue')
   .helpStyle('green')
   .errorsStyle('red.bold')
-  .help('Chunky')
+  .help('Chunky');
 
 yargs
   .command({
@@ -21,18 +21,18 @@ yargs
     handler: argv => {
       welcome(argv.name, argv.colour);
       userLoop(argv.name, argv.colour);
-    }
+    },
   })
   .option('c', {
     alias: 'colour',
     type: 'boolean',
-    describe: chalk.hex('#C1137C')('CLI add colours')
+    describe: chalk.hex('#C1137C')('CLI add colours'),
   })
   .option('version', {
-    describe: chalk.hex('#C1137C')('Show version number')
+    describe: chalk.hex('#C1137C')('Show version number'),
   })
   .help()
   .option('help', {
-    describe: chalk.hex('#C1137C')('Show help')
+    describe: chalk.hex('#C1137C')('Show help'),
   })
-  .argv
+  .argv;

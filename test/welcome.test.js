@@ -1,15 +1,14 @@
 const assert = require('assert');
 const {
-  createOutputInterceptor
+  createOutputInterceptor,
 } = require('output-interceptor');
 
 const welcome = require('../lib/welcome');
 
 describe('welcome', () => {
-
-  it(`should say \'¡Buenos días + name\'! if it\'s between 6 in the morning and 12 at noon,
-    should say \'¡Buenas tardes + name\'! if it\'s between 12 at noon and 8 in the afternoon,
-    should say \'¡Buenas noches + name\'! if it\'s between 8 in the afternoon and 6 in the morning
+  it(`should say '¡Buenos días + name'! if it's between 6 in the morning and 12 at noon,
+    should say '¡Buenas tardes + name'! if it's between 12 at noon and 8 in the afternoon,
+    should say '¡Buenas noches + name'! if it's between 8 in the afternoon and 6 in the morning
     `, async () => {
     const intercept = createOutputInterceptor();
 
@@ -26,6 +25,5 @@ describe('welcome', () => {
     } else {
       assert.equal(actual, '¡Buenas tardes Ruben!\n');
     }
-
   });
 });
