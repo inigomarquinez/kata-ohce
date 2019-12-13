@@ -1,0 +1,63 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/kata-ohce
+  docker:
+    - image: circleci/node:10
+
+jobs:
+  validations:
+    <<: *defaults
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: npm install
+      - run:
+          name: Run lint
+          command: npm run lint
+      - run:
+          name: Run tests
+          command: npm test
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      - persist_to_workspace:
+          root: ~/kata-ohce
+          paths: .
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/kata-ohce
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/kata-ohce/.npmrc
+      - run:
+          name: Publish package
+          command: npm publish
+
+workflows:
+  version: 2
+  test-deploy:
+    jobs:
+      - validations:
+          filters:
+            tags:
+              only: /^v.*/
+      - deploy:
+          requires:
+            - validations
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
