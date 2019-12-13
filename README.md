@@ -10,7 +10,7 @@ npm install -g ohce-power
 
 ## How to run the CLI
 
-The command to trigger the CLI is called `ohce`.
+The command to trigger the CLI is called `ohce` or `ohce-power`.
 
 ```bash
 ohce <name> [--color]

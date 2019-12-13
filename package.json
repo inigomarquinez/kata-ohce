@@ -12,7 +12,8 @@
     "lint:fix": "npx eslint . --fix"
   },
   "bin": {
-    "ohce": "./bin/index.js"
+    "ohce": "./bin/index.js",
+    "ohce-power": "./bin/index.js"
   },
   "contributors": [
     "Rubén Romero <ruben.romero@guidesmiths.com>",
