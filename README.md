@@ -16,13 +16,15 @@ npm install -g ohce-power
 The command to trigger the CLI is called `ohce` or `ohce-power`.
 
 ```bash
-ohce <name> [--color]
+ohce <name> [-c, --color] [--help] [--version]
 ```
 
 where:
 
   - `<name>` is a required argument to tell the CLI your name.
-  - `--color` is an option to configure the CLI to print messages with colours.
+  - `-c, --color` is an option to configure the CLI to print messages with colours.
+  - `--help` is an option that shows help information
+  - `--version` is an option that shows the version of CLI
 
 ## How does this CLI work?
 
