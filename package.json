@@ -27,11 +27,11 @@
     "mocha": "^6.2.2",
     "mock-stdin": "^1.0.0",
     "output-interceptor": "^3.2.0",
+    "generate-changelog": "^1.8.0",
     "sinon": "^7.5.0"
   },
   "dependencies": {
     "chalk": "^3.0.0",
-    "changelog": "^1.4.2",
     "yargonaut": "^1.1.4",
     "yargs": "^15.0.2"
   }
