@@ -3,7 +3,7 @@ version: 2
 defaults: &defaults
   working_directory: ~/kata-ohce
   docker:
-    - image: circleci/node:12node -v
+    - image: circleci/node:12
 
 jobs:
   validations:
