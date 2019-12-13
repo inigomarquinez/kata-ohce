@@ -50,7 +50,7 @@ describe('userLoop', () => {
       },
       {
         name: 'exit',
-        message: 'process.exit() was called.'
+        message: 'process.exit() was called.',
       }
     );
     assert(consoleLogStub.calledOnce);

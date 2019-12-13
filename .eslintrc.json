@@ -1,0 +1,13 @@
+{
+	"plugins": [
+    "mocha"
+  ],
+	"env": {
+			"mocha": true,
+			"es2020": true,
+			"node": true
+	},
+	"rules": {
+		"mocha/no-exclusive-tests": "error"
+	}
+}

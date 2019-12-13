@@ -4,6 +4,8 @@
   "description": "ohce CLI",
   "main": "bin/index.js",
   "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "node_modules/.bin/eslint . --fix",
     "test": "mocha"
   },
   "bin": {
@@ -16,6 +18,9 @@
   ],
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-plugin-mocha": "^6.2.2",
+    "husky": "^3.1.0",
     "mocha": "^6.2.2",
     "mock-stdin": "^1.0.0",
     "output-interceptor": "^3.2.0",
