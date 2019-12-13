@@ -70,8 +70,6 @@ describe('e2e', () => {
           .split(EOL)
           .pop()
 
-        console.log('response', response)
-        console.log('lastLine', lastLine)
       } catch (e) {
         console.log('error',e)
       }
