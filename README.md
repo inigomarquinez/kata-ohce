@@ -1,6 +1,7 @@
 # kata-ohce
 
 [![CircleCI](https://circleci.com/gh/inigomarquinez/kata-ohce.svg?style=svg)](https://circleci.com/gh/inigomarquinez/kata-ohce)
+![npm](https://img.shields.io/npm/v/ohce-power?style=plastic)
 
 **ohce kata at GuideSmiths for Xmas 2019**
 
