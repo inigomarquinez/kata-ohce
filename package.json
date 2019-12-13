@@ -4,7 +4,10 @@
   "description": "ohce CLI",
   "main": "bin/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "release:patch": "git tag -l | xargs git tag -d && changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags",
+    "release:minor": "git tag -l | xargs git tag -d && changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor && git push origin && git push origin --tags",
+    "release:major": "git tag -l | xargs git tag -d && changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags"
   },
   "bin": {
     "ohce": "./bin/index.js"
@@ -23,6 +26,7 @@
   },
   "dependencies": {
     "chalk": "^3.0.0",
+    "changelog": "^1.4.2",
     "yargonaut": "^1.1.4",
     "yargs": "^15.0.2"
   }
