@@ -14,7 +14,6 @@
   "bin": {
     "ohce": "./bin/index.js"
   },
-  "author": "",
   "contributors": [
     "Rubén Romero <ruben.romero@guidesmiths.com>",
     "Íñigo Marquínez <inigo.marquinez@guidesmiths.com>"
@@ -34,5 +33,16 @@
     "chalk": "^3.0.0",
     "yargonaut": "^1.1.4",
     "yargs": "^15.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inigomarquinez/kata-ohce"
+  },
+  "keywords": [
+    "ohce",
+    "cli",
+    "kata",
+    "guidesmiths"
+  ],
+  "homepage": "https://github.com/inigomarquinez/kata-ohce#readme"
 }
