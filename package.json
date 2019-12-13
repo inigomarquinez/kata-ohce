@@ -1,5 +1,5 @@
 {
-  "name": "ohce-cli",
+  "name": "ohce-power",
   "version": "1.0.0",
   "description": "ohce CLI",
   "main": "bin/index.js",
