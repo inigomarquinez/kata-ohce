@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-String.prototype.removePunctuationMarks = require('../lib/removePunctuationMarks'); // eslint-disable-line no-extend-native
+String.prototype.removePunctuationMarks = require('../lib/removePunctuationMarks');
 
 describe('removePunctuationMarks', () => {
   it('should remove punctuation marks from a string so the transformed string is not the same as the original one', () => {

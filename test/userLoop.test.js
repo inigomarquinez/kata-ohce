@@ -51,7 +51,7 @@ describe('userLoop', () => {
       {
         name: 'exit',
         message: 'process.exit() was called.',
-      },
+      }
     );
     assert(consoleLogStub.calledOnce);
     assert.strictEqual(consoleLogStub.getCall(0).lastArg, 'Adios user name');

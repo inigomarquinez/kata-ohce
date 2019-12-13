@@ -14,7 +14,7 @@ yargonaut
   .errorsStyle('red.bold')
   .help('Chunky');
 
-yargs // eslint-disable-line no-unused-expressions
+yargs
   .command({
     command: '$0 <name>',
     desc: chalk.hex('#13C4AC')('ohce is a console application that echoes the reverse of what you input through the console'),
