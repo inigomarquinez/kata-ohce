@@ -24,7 +24,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-mocha": "^6.2.2",
     "husky": "^3.1.0",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "mock-stdin": "^1.0.0",
     "output-interceptor": "^3.2.0",
     "generate-changelog": "^1.8.0",
